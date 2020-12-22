@@ -28,6 +28,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 1. [BMI Exercise](https://jsfiddle.net/samDg019/sdz8x3w0/7/) - An Exercise for Javascript varibles and boolean.
 
+1. [JavaScript Chess Board](https://sam-deguzman.github.io/batch5-activities/ChessBoardJS/index.html)) - First Challenging JavaScript Project, I used Grid for the layout same  as the previous one and has functions of Moving Pieces, Castling, Taking turn (White First), Timer and En Passant.
 
 <!---```### Support or Contact```--->
 
