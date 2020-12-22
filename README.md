@@ -12,7 +12,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 1. [Best Practices Page](https://sam-deguzman.github.io/batch5-activities/BestPracticePage/index.html) - First activity of the Avion main course, This page gives information about a practice that is considered wise or best being a Software Engineer or Programmer.
 
-1. [Letter Activity](https://sam-deguzman.github.io/MainCourse-AvionSchool/HTML_LetterActivity/index.html) - This page has been a good practice for the original use/purpose of HTML which is to "Mark-up" documents especially in the academic field.
+1. [Letter Activity](https://sam-deguzman.github.io/batch5-activities/HTML_LetterActivity/index.html) - This page has been a good practice for the original use/purpose of HTML which is to "Mark-up" documents especially in the academic field.
 
 1. [Tribute Page Project](https://sam-deguzman.github.io/batch5-activities/TributePageProject/index.html) - I created a Tribute Page for my Favorite Theologian, Dr. R.C Sproul, also got to practice more of CSS on this one.
 
