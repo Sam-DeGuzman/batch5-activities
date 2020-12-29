@@ -26,7 +26,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 1. [JavaScript Calculator](https://sam-deguzman.github.io/batch5-activities/Calculator/index.html) - The first project using JavaScript DOM, this is quite challenging to do because the concept can be confusing. but so far, I believe it works fine. 
 
-1. [BMI Exercise](https://jsfiddle.net/samDg019/sdz8x3w0/7/) - An Exercise for Javascript varibles and boolean.
+1. [BMI Exercise](https://jsfiddle.net/samDg019/sdz8x3w0/7/) - An Exercise for Javascript variables and boolean.
 
 1. [JavaScript Chess Board](https://sam-deguzman.github.io/batch5-activities/ChessBoardJS/index.html) - I think This Project is far too advanced for me currently, So this is mostly from a classmate's work, it uses Grid for the layout same as the previous one and has functions of Moving Pieces, Castling, Taking turn (White First), Timer and En Passant.
 
