@@ -42,7 +42,7 @@ export const InitializeChessMap = function (state, CHESS_DATA) {
 
     state.chess_obj = chess_obj;
     state.active_chess_obj = active_chess_obj;
-
+    colorChange();
     return state
 };
 
@@ -56,6 +56,7 @@ export const ReInitializeChessMap = function (init_state, state, CHESS_DATA) {
     state = JSON.parse(JSON.stringify(init_state))
     UndrawChessPieces(state.chess_obj[0])
     InitializeChessMap(state, CHESS_DATA)
+    colorChange();
 }
 
 
@@ -115,7 +116,7 @@ export const ToggleActivePiece = function (thisId, state) {
         // Checks if possible to Castling for a King selected
         CheckCastling(state)
     };
-
+    colorChange();
 };
 
 
@@ -197,6 +198,7 @@ export const PossibleMoveSelected = function (thisId, state) {
 
     // Post-Check if enemy kingdom's king was checked 
     CheckIfChecked(state, UndoMove)
+    colorChange();
 };
 
 
@@ -228,8 +230,22 @@ export const UndoMove = function (state) {
     // Locate king's location and check if checked
     findKing(state);
     CheckIfChecked(state, null);
+    colorChange();
 };
 
+export const colorChange = function () {
+    let color = document.getElementById("color");
+    let colorName = document.getElementById("activePlayer");
+
+    if (colorName.innerHTML === "WHITE") {
+        color.style.backgroundColor = "white";
+        colorName.style.color = "black";
+    }
+    if (colorName.innerHTML === "BLACK") {
+        color.style.backgroundColor = "black";
+        colorName.style.color = "white";
+    }
+};
 
 
 // Finds the king location in chess map

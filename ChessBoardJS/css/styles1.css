@@ -25,6 +25,7 @@ body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
+    box-shadow: 2px 2px 2px 3px rgba(0,0,0,0.2);
     width: 70vw;
     height: 70vh;
   }
@@ -78,5 +79,6 @@ body {
     /* background-image: url('../../../assets/green-marble.jpg') */
     /* background-image: url('../../../assets/dark-wood.jpg') */
   }
+  
   
   
