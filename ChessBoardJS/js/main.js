@@ -12,7 +12,8 @@ import { EnPassant, UpdateEnPassantState } from './special-rules/en-passant.js';
 import { CheckIfChecked, CheckAreaIfChecked } from './special-rules/check.js';
 import { CheckCastling, Castling } from './special-rules/castling.js';
 import { PawnPromotion } from './special-rules/promotion.js';
-import { getClassListIncludes, setInnerHtml } from './utils.js';
+import { getClassListIncludes, setInnerImg } from './utils.js';
+
 /*
 Initialize chess map, chess piece in the dom and chess object
 Also adds eventlisteners to chess tiles.
@@ -44,6 +45,7 @@ export const InitializeChessMap = function (state, CHESS_DATA) {
     state.active_chess_obj = active_chess_obj;
     colorChange();
     return state
+
 };
 
 
@@ -70,7 +72,7 @@ export const ToggleActivePiece = function (thisId, state) {
         active_chess_box_id,
         pawn_double_step_status,
         letters } = state;
-
+    console.log(state.players)
     // this function is only applicable to chess box with chess piece
     if (active_chess_obj[thisId]["piece"] == null) {
         return
@@ -115,8 +117,9 @@ export const ToggleActivePiece = function (thisId, state) {
         state.active_chess_box_id = active_chess_box_id;
         // Checks if possible to Castling for a King selected
         CheckCastling(state)
+        colorChange();
     };
-    colorChange();
+
 };
 
 
@@ -155,8 +158,8 @@ export const PossibleMoveSelected = function (thisId, state) {
     // update state.chess_obj and HTML DOM
     chessPieceMoved.piece = chessPieceOriginalBox.piece;
     chessPieceOriginalBox.piece = null;
-    setInnerHtml(previousBox, "")
-    setInnerHtml(nextBox, chessPieceMoved.piece.htmlcode)
+    setInnerImg(previousBox, "")
+    setInnerImg(nextBox, chessPieceMoved.piece.img)
 
     // if king was moved, and castled, move rook also
     Castling(chessPieceMoved, hasCastling, state)
@@ -233,6 +236,7 @@ export const UndoMove = function (state) {
     colorChange();
 };
 
+
 export const colorChange = function () {
     let color = document.getElementById("color");
     let colorName = document.getElementById("activePlayer");
@@ -246,7 +250,6 @@ export const colorChange = function () {
         colorName.style.color = "white";
     }
 };
-
 
 // Finds the king location in chess map
 const findKing = function (state) {

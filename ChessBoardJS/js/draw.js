@@ -61,10 +61,11 @@ export const DrawChessTiles = function (letters) {
 
 // insert the initial chess piece
 export const SetChessPieces = (chessObj, piecesInitialPlace, state) => {
+    // console.log(chessObj)
     let keys = Object.keys(piecesInitialPlace);
     for (let key in keys) {
         // Destructuring object
-        let { location, htmlcode, kingdom, position } = piecesInitialPlace[keys[key]];
+        let { location, htmlcode, kingdom, position, img } = piecesInitialPlace[keys[key]];
         // console.log(typeof location);
         // if piece is multiple 
         if (typeof location == "object") {
@@ -72,14 +73,16 @@ export const SetChessPieces = (chessObj, piecesInitialPlace, state) => {
                 chessObj[location[rowKey]].piece = {
                     htmlcode,
                     kingdom,
-                    position
+                    position,
+                    img
                 }
             };
         } else {
             chessObj[location].piece = {
                 htmlcode,
                 kingdom,
-                position
+                position,
+                img
             }
 
             if (position == "king") {
@@ -97,9 +100,10 @@ export const DrawChessPieces = (chessObj) => {
     let keys = Object.keys(chessObj);
     for (let chessBox in keys) {
         const chessBoxSelected = document.getElementById(keys[chessBox]);
-        const chessPieceBox = document.createElement("div");
-        chessPieceBox.innerHTML = (chessObj[keys[chessBox]].piece != null) ? (chessObj[keys[chessBox]].piece.htmlcode) : "";
+        const chessPieceBox = document.createElement("img");
+        // chessPieceBox.innerHTML = (chessObj[keys[chessBox]].piece != null) ? (chessObj[keys[chessBox]].piece.htmlcode) : "" ;
         chessPieceBox.setAttribute("class", "chess-piece");
+        chessPieceBox.setAttribute("src", (chessObj[keys[chessBox]].piece != null) ? (chessObj[keys[chessBox]].piece.img) : "");
         chessBoxSelected.appendChild(chessPieceBox);
     };
 }
@@ -118,9 +122,9 @@ export const RedrawChessPieces = (chessObj) => {
     for (let chessBox in keys) {
         const chessBoxSelected = document.getElementById(keys[chessBox]);
         // console.log(chessBoxSelected)
-        const chessPieceBox = document.createElement("div");
+        const chessPieceBox = document.createElement("img");
         chessPieceBox.setAttribute("class", "chess-piece");
-        chessPieceBox.innerHTML = (chessObj[keys[chessBox]].piece != null) ? (chessObj[keys[chessBox]].piece.htmlcode) : "";
+        chessPieceBox.setAttribute("src", (chessObj[keys[chessBox]].piece != null) ? (chessObj[keys[chessBox]].piece.img) : "");
         chessBoxSelected.replaceChild(chessPieceBox, chessBoxSelected.children[0]);
     };
 }
