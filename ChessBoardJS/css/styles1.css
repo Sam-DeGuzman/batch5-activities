@@ -79,7 +79,7 @@ body {
   }
   
   .black {
-    background-image: linear-gradient(to top left, #cc3535, #d6797996);
+    background-image: linear-gradient(to top left, #800000, #80000096);
     background-position: center;
     background-size: cover;
     /* background-image: url('../../../assets/white-marble.jpg') */
