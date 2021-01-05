@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet">
+
+    <script type="module" src="./script.js"></script>
+
+    <title>Playing Cards</title>
+
+    <style>
+        * {
+            font-family: 'JetBrains Mono', monospace, Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            text-align: center;
+            margin: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #heading {
+            color: white;
+            background-color: maroon;
+            width: 20%;
+            margin: auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #cardDealt {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        #cardDeck {
+            padding: 10px 5px 10px 5px;
+            word-wrap: break-word;
+            margin: auto;
+            width: 100%;
+            height: 50px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: white;
+            background-color: #b6850b;
+        }
+
+        #dealButton {
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #dealingHistory {
+            padding: 10px 5px 10px 5px;
+            word-wrap: break-word;
+            margin: auto;
+            width: 100%;
+            height: 50px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: white;
+            background-color: #b6850b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Playing Cards</h1>
+    <div id="heading">Cards Deck</div>
+    <div id="cardDeck">
+        "♣A","♠A","♡A","♢A","♣2","♠2","♡2","♢2","♣3","♠3","♡3","♢3","♣4","♠4","♡4","♢4","♣5","♠5","♡5","♢5","♣6","♠6","♡6","♢6","♣7","♠7","♡7","♢7","♣8","♠8","♡8","♢8","♣9","♠9","♡9","♢9","♣10","♠10","♡10","♢10","♣J","♠J","♡J","♢J","♣Q","♠Q","♡Q","♢Q","♣K","♠K","♡K","♢K"
+    </div>
+    <div id="heading">Current Card Dealt</div>
+    <div id="cardDealt">Card Name Goes Here</div>
+    <div style="margin: auto; text-align: center;">
+        <Button id="dealButton">Deal A Card</Button>
+    </div>
+    <div id="heading">Dealing History</div>
+    <div id="dealingHistory">"♣10"</div>
+    <div id="heading">Select from History</div>
+    <div id="selectHistory">♣10</div>
+    <div><button id="prev">Prev</button> <button id="next">Next</button></div>\
+    <div><button button id="reshuffle">Reshuffle</button></div>
+    <div>Made By: Sam</div>
+</body>
+
+</html>
