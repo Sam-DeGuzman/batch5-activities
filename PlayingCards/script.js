@@ -77,13 +77,13 @@ function dealCard(arr) {
     }
 
     if (randomCard[0] === "♣") {
-        card.innerHTML = toName(num) + " of Clovers" + " - " + num + "♣";
+        card.innerHTML = toName(num) + " of Clovers" + " - ♣" + num;
     } else if (randomCard[0] === "♠") {
-        card.innerHTML = toName(num) + " of Spades" + " - " + num + "♠";
+        card.innerHTML = toName(num) + " of Spades" + " - ♠" + num;
     } else if (randomCard[0] === "♡") {
-        card.innerHTML = toName(num) + " of Hearts" + " - " + num + "♡";
+        card.innerHTML = toName(num) + " of Hearts" + " - ♡" + num;
     } else if (randomCard[0] === "♢") {
-        card.innerHTML = toName(num) + " of Diamonds" + " - " + num + "♢";
+        card.innerHTML = toName(num) + " of Diamonds" + " - ♢" + num;
     }
 
     // card.innerHTML = rem;
