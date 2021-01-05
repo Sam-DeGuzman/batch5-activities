@@ -31,7 +31,8 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 1. [JavaScript Chess Board](https://sam-deguzman.github.io/batch5-activities/ChessBoardJS/index.html) - I think This Project is far too advanced for me currently, So this is mostly from a classmate's work but I've tried to understand some of the concepts used to add some of my own styles from the grid chessboard, it still uses Grid for the layout same as the previous one and has functions of Moving Pieces, Castling, Taking turn (White First), Timer and En Passant.
 
 ### 2021
-1. [Playing Cards Exercise](https://jsfiddle.net/samDg019/0b6spu2x/112/) - In this exercise I practiced how to use JavaScript/Custom functions, and use different ways to work with arrays. 
+1. [Playing Cards Exercise](https://jsfiddle.net/samDg019/vr73Lkjs/1/) - In this exercise I practiced how to use JavaScript/Custom functions, and use different ways to work with arrays. 
+1. [Playing Cards with UI](https://sam-deguzman.github.io/batch5-activities/PlayingCards/index.html) - This is the continuation of the playing cards related exercise, it has buttons with different function, and I get to practice Array functions more.
 <!---```### Support or Contact```--->
 
 <!---Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.--->
