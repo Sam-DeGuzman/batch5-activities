@@ -1,21 +1,21 @@
 //Made by Sam
 alert("Open Console and invoke startQuiz(); to start !");
 
-let questions = ["What does HTML stand for?",
-    "How many tags are in a regular element?",
-    "what is the difference in an opening tag and a closing tag?",
-    "<br/> What type of tag is this?",
-    "<body> Is this an opening tag or a closing tag?",
-    "</body > Is this an opening tag or a closing tag?",
-    "Where is the meta tag only found?",
-    "Which is the correct way to tag an image?",
-    "What is an element that does not have a closing tag called?",
-    "Which of the following is an example of an empty element?",
-    "What should values always be enclosed in?",
-    "Where do all items for the same web site need to be saved?",
-    "What does < a  href = ”http://www.google.com“ title = ”Link to Google ”target = ”_blank”>Google</a> do?",
-    "What is always a welcome page, and explains the purpose or topic of the site?",
-    "What does View Source do?"
+let questions = ["1.) What does HTML stand for?",
+    "2.) How many tags are in a regular element?",
+    "3.) what is the difference in an opening tag and a closing tag?",
+    "4.) <br/> What type of tag is this?",
+    "5.) <body> Is this an opening tag or a closing tag?",
+    "6.) </body > Is this an opening tag or a closing tag?",
+    "7.) Where is the meta tag only found?",
+    "8.) Which is the correct way to tag an image?",
+    "9.) What is an element that does not have a closing tag called?",
+    "10.) Which of the following is an example of an empty element?",
+    "11.) What should values always be enclosed in?",
+    "12.) Where do all items for the same web site need to be saved?",
+    "13.) What does < a  href = ”http://www.google.com“ title = ”Link to Google ”target = ”_blank”>Google</a> do?",
+    "14.) What is always a welcome page, and explains the purpose or topic of the site?",
+    "15.) What does View Source do?"
 ];
 
 function selectQuestion() {
