@@ -34,6 +34,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 1. [Playing Cards Exercise](https://jsfiddle.net/samDg019/vr73Lkjs/1/) - In this exercise I practiced how to use JavaScript/Custom functions, and use different ways to work with arrays. 
 1. [Playing Cards with UI](https://sam-deguzman.github.io/batch5-activities/PlayingCards/index.html) - This is the continuation of the playing cards related exercise, it has buttons with different function, and I get to practice Array functions more.
 1. [HTML5 Console Quiz](https://sam-deguzman.github.io/batch5-activities/HTML5Quiz-JS/index.html) - A console HTML5 quiz using JavaScript Arrays and functions.
+1. [Pig Game Activity](https://lyndoncortez.github.io/batch5-pig-game/) - The first pair-programming, this involves use of git and javascript functions. 
 <!---```### Support or Contact```--->
 
 <!---Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.--->
