@@ -27,19 +27,52 @@ function selectQuestion() {
 
 }
 
+let score = 0;
 function startQuiz() {
-    let selectedQuestion = selectQuestion();
-    console.log(questions[selectedQuestion]);
-    showChoices(selectedQuestion);
+    let exit = false;
 
-    let answer = parseInt(prompt());
+    while (!exit) {
+        let selectedQuestion = selectQuestion();
+        console.log(questions[selectedQuestion]);
+        showChoices(selectedQuestion);
+        let answer = prompt("Write 'Exit' to 'exit' to quit \nOr Write your Answer Here: ");
+        let point = checkAnswer(selectedQuestion, answer);
+        if (point === 1) {
+            score++;
+            console.log("Current Score: " + score);
+            streaksOfFive(score);
+        }
+
+        if (answer === "Exit" || answer === "exit") {
+            console.log("Exiting...");
+            exit = true
+        }
+        else {
+            let selectedQuestion2 = selectQuestion();
+            console.log(questions[selectedQuestion2]);
+            showChoices(selectedQuestion2);
+            let answer = prompt("Write 'Exit' to 'exit' to quit \nOr Write your Answer Here:");
+            let point = checkAnswer(selectedQuestion2, answer);
+            if (point === 1) {
+                score++;
+                console.log("Current Score " + score);
+                streaksOfFive(score);
+            }
+        }
+    }
+
     // console.log(selectedQuestion);
     // console.log(answer);
     // console.log(typeof (selectedQuestion));
     // console.log(typeof (answer));
-
-    checkAnswer(selectedQuestion, answer);
 }
+
+function streaksOfFive(num) {
+    if (num > 0 && num % 5 == 0) {
+        alert("Winning Streak of " + num + "!");
+    }
+}
+
 
 function showChoices(index) {
     let choices = ["1) Hyper Text Markup Language",
@@ -139,52 +172,68 @@ function showChoices(index) {
 }
 
 function checkAnswer(question, answer) {
-    if (question === 0 && answer === 1) {
+    if (question === 0 && answer === "1") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 1 && answer === 1) {
+    else if (question === 1 && answer === "1") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 2 && answer === 2) {
+    else if (question === 2 && answer === "2") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 3 && answer === 1) {
+    else if (question === 3 && answer === "1") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 4 && answer === 1) {
+    else if (question === 4 && answer === "1") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 5 && answer === 2) {
+    else if (question === 5 && answer === "2") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 6 && answer === 2) {
+    else if (question === 6 && answer === "2") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 7 && answer === 3) {
+    else if (question === 7 && answer === "3") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 8 && answer === 2) {
+    else if (question === 8 && answer === "2") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 9 && answer === 1) {
+    else if (question === 9 && answer === "1") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 10 && answer === 1) {
+    else if (question === 10 && answer === "1") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 11 && answer === 1) {
+    else if (question === 11 && answer === "1") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 12 && answer === 1) {
+    else if (question === 12 && answer === "1") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 13 && answer === 2) {
+    else if (question === 13 && answer === "2") {
         console.log("Correct!");
+        return 1;
     }
-    else if (question === 14 && answer === 2) {
+    else if (question === 14 && answer === "2") {
         console.log("Correct!");
+        return 1;
     }
     else {
         console.log("Wrong!");
+        return 0;
     }
 }
