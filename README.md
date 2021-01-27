@@ -34,7 +34,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 1. [Playing Cards Exercise](https://jsfiddle.net/samDg019/vr73Lkjs/1/) - In this exercise I practiced how to use JavaScript/Custom functions, and use different ways to work with arrays. 
 1. [Playing Cards with UI](https://sam-deguzman.github.io/batch5-activities/PlayingCards/index.html) - This is the continuation of the playing cards related exercise, it has buttons with different function, and I get to practice Array functions more.
 1. [HTML5 Console Quiz](https://sam-deguzman.github.io/batch5-activities/HTML5Quiz-JS/index.html) - A console HTML5 quiz using JavaScript Arrays and functions.
-1. [Pig Game Activity](https://lyndoncortez.github.io/batch5-pig-game/) - The first pair-programming, this involves use of git and javascript functions. 
+1. [Pig Game Activity](https://lyndoncortez.github.io/batch5-pig-game/) - The first pair-programming activity with my classmate Lyndon Cortez, this involves use of git and javascript functions. 
 1. [Book Store Activity](https://sam-deguzman.github.io/batch5-activities/BookStore/index.html) - A Book Store console program having book adding, restocking and selling, uses Objects and array concepts.
 1. [Banking App Project](https://ddcmendoza.github.io/Banking_App/index.html) - A pair programming project with Dave Mendoza, this is a Banking App using Javascript with DOM Manipulation and localStorage. 
 <!---```### Support or Contact```--->
