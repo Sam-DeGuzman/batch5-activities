@@ -180,6 +180,9 @@ span {
   }
 @media screen and (max-width: 767px)
  {
+  #img-logo{
+    max-width: 20%;
+}
   #header{
     position: fixed;;
     width: 100%;
@@ -394,6 +397,9 @@ span {
   
 }
 @media only screen and (max-width: 500px) {
+  #img-logo{
+    max-width: 20%;
+}
     .img-container{
         margin-top: 72px;
     }
@@ -417,6 +423,10 @@ span {
         background-color: white;
         position: absolute;
         display: block;
+    }
+    #video{
+      width: 100%;
+      max-width: 80%;
     }
     
     
