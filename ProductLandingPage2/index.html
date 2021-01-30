@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="nav">
+        <img src="assets/header-img.png" alt="Copic Logo" id="img-logo">
+        <label for="toggle" id="toggle-label">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <div class="menu">
+            <a href="#copicink" class="nav-link">CopicInk</a>
+            <a href="#fanart" class="nav-link">Usage Tips</a>
+            <a href="#contact" class="nav-link">Contact Us</a>
+        </div>
+    </div>
+
+    <section id="main">
+        <div class="img-container">
+            <img class="design-img" src="assets/design.jpg" alt="" style="width: 100%; z-index: 1;">
+        </div>
+    </section>
+
+    <section id="copicink">
+
+        <img class="ink-logo" src="assets/copicink.svg" alt="">
+        <img class="colorsample" src="assets/color.png" alt="">
+        <img class="newink" src="assets/newrefill.png" alt="">
+
+        <h1>New Copic refill inks are available.</h1>
+        <p>
+            This is a refill ink that comes in a bottle with nozzle for users to refill their Copic Markers.
+            Its pen-shape form makes it compact and easy to fit in a Copic wallet for traveling while users may use
+            the ink directly to create ink art.
+        </p>
+
+        <a href="https://copic.jp/en/product/" class="myButton" target="_blank">Learn More</a>
+    </section>
+
+    <section id="fanart">
+        <h1>Beginner tips using Copic!</h1>
+        <br>
+
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/1ktiV-V24Og" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <br>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us !</h1>
+        <br>
+
+        <form id="form" action="./submitForm.html">
+            <label id="email-label" for="email">Email: </label>
+
+            <input id="email" type="email" name="email" placeholder="Email Address" required>
+            <br>
+            <br>
+
+            <input id="submit" type="submit" value="Send">
+
+
+        </form>
+
+    </section>
+</body>
+
+</html>

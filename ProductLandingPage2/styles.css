@@ -1,0 +1,433 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+html {
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";;
+}
+
+#img-logo{
+    float: left; 
+    margin-left: 30px; 
+    object-fit: contain;
+    overflow: hidden;
+    width:100%; 
+    height: 100%;
+    max-width: 12%;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    z-index: 5;
+    position: fixed;
+    border-bottom: 1px solid #EAEAEB;
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+}
+.menu {
+    margin: 0 30px 0 0;
+    z-index: 5;
+}
+.menu a {
+    z-index: 5;
+    clear: right;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    line-height: 70px;
+}
+.menu a:hover{
+    color:#bbb1b1;
+}
+
+span {
+    color: #54D17A;
+}
+
+#toggle-label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+#toggle {
+    display: none;
+}
+
+
+#main{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    background-color: #fffffe;
+  }
+
+.img-container {
+    z-index: 1;
+    margin-top: 80px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    height: auto;
+  }
+  #copicink{
+    text-align: center; 
+    padding: 40px 30px; 
+    background-color: #F7DC6F;
+  }
+  
+  .ink-logo{
+      display: block;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 25%;
+  }
+  
+  .newink{
+    display: block;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 60%;
+  }
+  
+  .colorsample{
+    width: 10%;
+  }
+  .colorsample:hover{
+    width: 12%;
+  }
+  
+  .myButton {
+      box-shadow: 0px 10px 14px -7px #354231;
+      background-color:#76c744;
+      border-radius:8px;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:18px;
+      font-weight:bold;
+      padding:13px 32px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #58c744;
+  }
+  .myButton:hover {
+      background-color:#5cbf2a;
+  }
+  .myButton:active {
+      position:relative;
+      top:1px;
+  }
+  
+  #fanart{
+    text-align: center;
+    padding: 70px 70px; 
+    background-color: #F8C471;
+  }
+  
+  #video{
+    width: 100%;
+    max-width: 50%;
+  }
+  
+  #contact{
+    text-align: center;
+    padding: 70px 30px; 
+    background-color: #F0B27A;
+  }
+  #email-label{
+    font-weight: 600;
+  }
+  #email{
+    width: 50%;
+    border-radius:8px;
+    padding: 12px 20px;
+  }
+  
+  #submit {
+      box-shadow: 0px 10px 14px -7px #354231;
+      background-color:#76c744;
+      border-radius:8px;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:18px;
+      font-weight:bold;
+      padding:13px 15px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #58c744;
+  }
+  #submit:hover {
+      background-color:#5cbf2a;
+  }
+  #submit:active {
+      position:relative;
+      top:1px;
+  }
+@media screen and (max-width: 767px)
+ {
+  #header{
+    position: fixed;;
+    width: 100%;
+    height: 70px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 5%;
+  }
+  #header-img{
+    width: 100%;
+    height: 100%;
+    max-width: 20%;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .nav-link a {
+    text-decoration:none;
+    color:#000;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2.5;
+    font-weight: normal;
+  }
+
+  .ink-logo{
+    display: block;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 50%;
+  }
+  .nav-link a {
+    text-decoration:none;
+    color:#000;
+    font-size: 15px;
+    height:20px
+  }
+  .colorsample{
+    width: 10%;
+  }
+  .colorsample:hover{
+    width: 20%;
+  }
+  
+  #video{
+    width: 100%;
+    max-width: 80%;
+  }
+  .newink{
+    display: block;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 80%;
+  }
+  .myButton {
+    box-shadow: 0px 10px 14px -7px #354231;
+    background-color:#76c744;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:13px 32px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #58c744;
+  }
+  
+}@media screen and (max-width: 767px)
+ {
+  #header{
+    position: fixed;;
+    width: 100%;
+    height: 70px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 5%;
+  }
+  #header-img{
+    width: 100%;
+    height: 100%;
+    max-width: 20%;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .nav-link a {
+    text-decoration:none;
+    color:#000;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2.5;
+    font-weight: normal;
+  }
+
+  .ink-logo{
+    display: block;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 50%;
+  }
+  .nav-link a {
+    text-decoration:none;
+    color:#000;
+    font-size: 15px;
+    height:20px
+  }
+  .colorsample{
+    width: 10%;
+  }
+  .colorsample:hover{
+    width: 20%;
+  }
+  
+  #video{
+    width: 100%;
+    max-width: 80%;
+  }
+  .newink{
+    display: block;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 80%;
+  }
+  .myButton {
+    box-shadow: 0px 10px 14px -7px #354231;
+    background-color:#76c744;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:13px 32px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #58c744;
+  }
+  
+}
+@media screen and (max-width: 767px)
+ {
+    .img-container{
+        margin-top: 72px;
+    }
+    #header-img{
+    width: 100%;
+    height: 100%;
+    max-width: 20%;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .nav-link a {
+    text-decoration:none;
+    color:#000;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2.5;
+    font-weight: normal;
+  }
+
+  .ink-logo{
+    display: block;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 50%;
+  }
+  .nav-link a {
+    text-decoration:none;
+    color:#000;
+    font-size: 15px;
+    height:20px
+  }
+  .colorsample{
+    width: 10%;
+  }
+  .colorsample:hover{
+    width: 20%;
+  }
+  
+  #video{
+    width: 100%;
+    max-width: 80%;
+  }
+  .newink{
+    display: block;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 80%;
+  }
+  .myButton {
+    box-shadow: 0px 10px 14px -7px #354231;
+    background-color:#76c744;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:13px 32px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #58c744;
+  }
+  
+}
+@media only screen and (max-width: 500px) {
+    .img-container{
+        margin-top: 72px;
+    }
+    #toggle-label {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        margin-top: 70px;
+        width: 100%;
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+     
+    }
+    #toggle:checked + .menu {
+        background-color: white;
+        position: absolute;
+        display: block;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
