@@ -14,84 +14,80 @@
 	</div>
 	<div id="popup1" class="overlay">
 		<div class="popup">
-			<h1 style="text-align: center;">Chess Game</h1>
-			<h2 style="text-align: center;">Press Play button to start ! 🎮</h2>
-			<p style="text-align: center;">It's white turn First</p>
-
-			<div class="content-1">
-				<span id="winner"> </span>
-			</div>
-
+			<h1 class="modal-h1" style="text-align: center;"></h1>
+			<h2 class="modal-h2" style="text-align: center;"></h2>
+			<p class="modal-p" style="text-align: center;"></p>
 			<button id="play" onclick="play()">
-				Play ▶️</a>
 			</button>
 		</div>
 	</div>
+
+
 	<div class="board">
-		<div class="box r1 c1" onclick="movePieces(1,1)"></div>
-		<div class="box r1 c2" onclick="movePieces(1,2)"></div>
-		<div class="box r1 c3" onclick="movePieces(1,3)"></div>
-		<div class="box r1 c4" onclick="movePieces(1,4)"></div>
-		<div class="box r1 c5" onclick="movePieces(1,5)"></div>
-		<div class="box r1 c6" onclick="movePieces(1,6)"></div>
-		<div class="box r1 c7" onclick="movePieces(1,7)"></div>
-		<div class="box r1 c8" onclick="movePieces(1,8)"></div>
-		<div class="box r2 c1" onclick="movePieces(2,1)"></div>
-		<div class="box r2 c2" onclick="movePieces(2,2)"></div>
-		<div class="box r2 c3" onclick="movePieces(2,3)"></div>
-		<div class="box r2 c4" onclick="movePieces(2,4)"></div>
-		<div class="box r2 c5" onclick="movePieces(2,5)"></div>
-		<div class="box r2 c6" onclick="movePieces(2,6)"></div>
-		<div class="box r2 c7" onclick="movePieces(2,7)"></div>
-		<div class="box r2 c8" onclick="movePieces(2,8)"></div>
-		<div class="box r3 c1" onclick="movePieces(3,1)"></div>
-		<div class="box r3 c2" onclick="movePieces(3,2)"></div>
-		<div class="box r3 c3" onclick="movePieces(3,3)"></div>
-		<div class="box r3 c4" onclick="movePieces(3,4)"></div>
-		<div class="box r3 c5" onclick="movePieces(3,5)"></div>
-		<div class="box r3 c6" onclick="movePieces(3,6)"></div>
-		<div class="box r3 c7" onclick="movePieces(3,7)"></div>
-		<div class="box r3 c8" onclick="movePieces(3,8)"></div>
-		<div class="box r4 c1" onclick="movePieces(4,1)"></div>
-		<div class="box r4 c2" onclick="movePieces(4,2)"></div>
-		<div class="box r4 c3" onclick="movePieces(4,3)"></div>
-		<div class="box r4 c4" onclick="movePieces(4,4)"></div>
-		<div class="box r4 c5" onclick="movePieces(4,5)"></div>
-		<div class="box r4 c6" onclick="movePieces(4,6)"></div>
-		<div class="box r4 c7" onclick="movePieces(4,7)"></div>
-		<div class="box r4 c8" onclick="movePieces(4,8)"></div>
-		<div class="box r5 c1" onclick="movePieces(5,1)"></div>
-		<div class="box r5 c2" onclick="movePieces(5,2)"></div>
-		<div class="box r5 c3" onclick="movePieces(5,3)"></div>
-		<div class="box r5 c4" onclick="movePieces(5,4)"></div>
-		<div class="box r5 c5" onclick="movePieces(5,5)"></div>
-		<div class="box r5 c6" onclick="movePieces(5,6)"></div>
-		<div class="box r5 c7" onclick="movePieces(5,7)"></div>
-		<div class="box r5 c8" onclick="movePieces(5,8)"></div>
-		<div class="box r6 c1" onclick="movePieces(6,1)"></div>
-		<div class="box r6 c2" onclick="movePieces(6,2)"></div>
-		<div class="box r6 c3" onclick="movePieces(6,3)"></div>
-		<div class="box r6 c4" onclick="movePieces(6,4)"></div>
-		<div class="box r6 c5" onclick="movePieces(6,5)"></div>
-		<div class="box r6 c6" onclick="movePieces(6,6)"></div>
-		<div class="box r6 c7" onclick="movePieces(6,7)"></div>
-		<div class="box r6 c8" onclick="movePieces(6,8)"></div>
-		<div class="box r7 c1" onclick="movePieces(7,1)"></div>
-		<div class="box r7 c2" onclick="movePieces(7,2)"></div>
-		<div class="box r7 c3" onclick="movePieces(7,3)"></div>
-		<div class="box r7 c4" onclick="movePieces(7,4)"></div>
-		<div class="box r7 c5" onclick="movePieces(7,5)"></div>
-		<div class="box r7 c6" onclick="movePieces(7,6)"></div>
-		<div class="box r7 c7" onclick="movePieces(7,7)"></div>
-		<div class="box r7 c8" onclick="movePieces(7,8)"></div>
-		<div class="box r8 c1" onclick="movePieces(8,1)"></div>
-		<div class="box r8 c2" onclick="movePieces(8,2)"></div>
-		<div class="box r8 c3" onclick="movePieces(8,3)"></div>
-		<div class="box r8 c4" onclick="movePieces(8,4)"></div>
-		<div class="box r8 c5" onclick="movePieces(8,5)"></div>
-		<div class="box r8 c6" onclick="movePieces(8,6)"></div>
-		<div class="box r8 c7" onclick="movePieces(8,7)"></div>
-		<div class="box r8 c8" onclick="movePieces(8,8)"></div>
+		<div class="box r1 c1" onclick="usePiece(1,1)"></div>
+		<div class="box r1 c2" onclick="usePiece(1,2)"></div>
+		<div class="box r1 c3" onclick="usePiece(1,3)"></div>
+		<div class="box r1 c4" onclick="usePiece(1,4)"></div>
+		<div class="box r1 c5" onclick="usePiece(1,5)"></div>
+		<div class="box r1 c6" onclick="usePiece(1,6)"></div>
+		<div class="box r1 c7" onclick="usePiece(1,7)"></div>
+		<div class="box r1 c8" onclick="usePiece(1,8)"></div>
+		<div class="box r2 c1" onclick="usePiece(2,1)"></div>
+		<div class="box r2 c2" onclick="usePiece(2,2)"></div>
+		<div class="box r2 c3" onclick="usePiece(2,3)"></div>
+		<div class="box r2 c4" onclick="usePiece(2,4)"></div>
+		<div class="box r2 c5" onclick="usePiece(2,5)"></div>
+		<div class="box r2 c6" onclick="usePiece(2,6)"></div>
+		<div class="box r2 c7" onclick="usePiece(2,7)"></div>
+		<div class="box r2 c8" onclick="usePiece(2,8)"></div>
+		<div class="box r3 c1" onclick="usePiece(3,1)"></div>
+		<div class="box r3 c2" onclick="usePiece(3,2)"></div>
+		<div class="box r3 c3" onclick="usePiece(3,3)"></div>
+		<div class="box r3 c4" onclick="usePiece(3,4)"></div>
+		<div class="box r3 c5" onclick="usePiece(3,5)"></div>
+		<div class="box r3 c6" onclick="usePiece(3,6)"></div>
+		<div class="box r3 c7" onclick="usePiece(3,7)"></div>
+		<div class="box r3 c8" onclick="usePiece(3,8)"></div>
+		<div class="box r4 c1" onclick="usePiece(4,1)"></div>
+		<div class="box r4 c2" onclick="usePiece(4,2)"></div>
+		<div class="box r4 c3" onclick="usePiece(4,3)"></div>
+		<div class="box r4 c4" onclick="usePiece(4,4)"></div>
+		<div class="box r4 c5" onclick="usePiece(4,5)"></div>
+		<div class="box r4 c6" onclick="usePiece(4,6)"></div>
+		<div class="box r4 c7" onclick="usePiece(4,7)"></div>
+		<div class="box r4 c8" onclick="usePiece(4,8)"></div>
+		<div class="box r5 c1" onclick="usePiece(5,1)"></div>
+		<div class="box r5 c2" onclick="usePiece(5,2)"></div>
+		<div class="box r5 c3" onclick="usePiece(5,3)"></div>
+		<div class="box r5 c4" onclick="usePiece(5,4)"></div>
+		<div class="box r5 c5" onclick="usePiece(5,5)"></div>
+		<div class="box r5 c6" onclick="usePiece(5,6)"></div>
+		<div class="box r5 c7" onclick="usePiece(5,7)"></div>
+		<div class="box r5 c8" onclick="usePiece(5,8)"></div>
+		<div class="box r6 c1" onclick="usePiece(6,1)"></div>
+		<div class="box r6 c2" onclick="usePiece(6,2)"></div>
+		<div class="box r6 c3" onclick="usePiece(6,3)"></div>
+		<div class="box r6 c4" onclick="usePiece(6,4)"></div>
+		<div class="box r6 c5" onclick="usePiece(6,5)"></div>
+		<div class="box r6 c6" onclick="usePiece(6,6)"></div>
+		<div class="box r6 c7" onclick="usePiece(6,7)"></div>
+		<div class="box r6 c8" onclick="usePiece(6,8)"></div>
+		<div class="box r7 c1" onclick="usePiece(7,1)"></div>
+		<div class="box r7 c2" onclick="usePiece(7,2)"></div>
+		<div class="box r7 c3" onclick="usePiece(7,3)"></div>
+		<div class="box r7 c4" onclick="usePiece(7,4)"></div>
+		<div class="box r7 c5" onclick="usePiece(7,5)"></div>
+		<div class="box r7 c6" onclick="usePiece(7,6)"></div>
+		<div class="box r7 c7" onclick="usePiece(7,7)"></div>
+		<div class="box r7 c8" onclick="usePiece(7,8)"></div>
+		<div class="box r8 c1" onclick="usePiece(8,1)"></div>
+		<div class="box r8 c2" onclick="usePiece(8,2)"></div>
+		<div class="box r8 c3" onclick="usePiece(8,3)"></div>
+		<div class="box r8 c4" onclick="usePiece(8,4)"></div>
+		<div class="box r8 c5" onclick="usePiece(8,5)"></div>
+		<div class="box r8 c6" onclick="usePiece(8,6)"></div>
+		<div class="box r8 c7" onclick="usePiece(8,7)"></div>
+		<div class="box r8 c8" onclick="usePiece(8,8)"></div>
 	</div>
 	<div style="display: flex; justify-content: space-evenly;">
 		<span class="timerwhite">White - 15:00</span>
@@ -99,7 +95,7 @@
 	</div>
 	<div style="display: flex; justify-content: center;">
 		<span class="description"></span>
-		<span id="reset" onclick="reset()">Reset Game</span>
+		<span id="reset-game" onclick="reset()">Restart 🔄</span>
 	</div>
 
 	<script src="./scripts.js"></script>
