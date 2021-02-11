@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top"
         style="background-color:rgba(127,22,16,100) !important;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="font-family: 'Potta One', cursive;">
+            <a class="navbar-brand" href="index.html" style="font-family: 'Potta One', cursive;">
                 <img src="assets/imgs/logo.png" alt="" width="30" height="30" class="d-inline-block align-top"
                     id="logo">
                 AnimeLeaf
@@ -54,8 +54,62 @@
             </div>
         </div>
     </nav>
-    <div>
+    <h1 class="display-5 text-center">Search</h1>
 
+    <div class="text-center">
+        <img src="assets/imgs/search-img.png" alt="" width="100%" id="welcome-img">
+    </div>
+
+    <div class="container">
+        <section class="row justify-content-center">
+            <article class="col-sm-7 col-md-7">
+                <div class="input-group input-group-lg">
+                    <select class="form-select" id="inputGroupSelect01" style="width:20%;">
+                        <option value="anime" selected>Anime</option>
+                        <option value="manga">Manga</option>
+                        <option value="people">Characters / People</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="Title/Character"
+                        aria-label="Recipient's username with two button addons" id="search-input" required>
+                    <button class="btn btn-primary btn-outline-secondary text-light" type="button"
+                        style="font-size: 30px;" id="search-btn">🔍</button>
+                </div>
+            </article>
+
+        </section>
+        <hr>
+        <h3 id="result-info" style="display: none;">Search Results for : <span id="query">Naruto</span></h3>
+        <section class="row" id="searchContent" style="margin-top:10px;">
+            <div class="text-center" id="tempImg-container">
+                <img src="assets/imgs/mikasa-img.png" alt="" width="100%" id="mikasa-img">
+            </div>
+            <article class="col-sm-6 col-md-4 col-lg-3 g-4" id="cardArticle" style="display:none;">
+                <div class="card"><img class="card-img-top" alt="..."
+                        src="https://cdn.myanimelist.net/images/anime/1000/110531.jpg?s=3df5ebb6800604dc04c6a6187dd7161b">
+                    <div class="card-body text-center" style="background-color: rgb(242, 242, 242);">
+                        <h6 class="card-text" style="font-size: 13px;">Shingeki no Kyojin: The Final Season</h6><span
+                            class="badge bg-success">Rating : 9.17</span><span
+                            class="badge bg-secondary text-light">Episodes : 16</span><a id="moreBtn"
+                            href="https://myanimelist.net/anime/40028/Shingeki_no_Kyojin__The_Final_Season"
+                            class="btn btn-primary mt-2"
+                            style="margin: auto; width: 40%; font-size: 12px; display: block;">Read More</a>
+                    </div>
+                </div>
+
+            </article>
+            <article class="col-sm-6 col-md-4 col-lg-3 g-4" id="cardArticle2" style="display: none;">
+                <div class="card"><img class="card-img-top" alt="..."
+                        src="https://cdn.myanimelist.net/images/anime/11/33657.jpg?s=5724d8c22ae7a1dad72d8f4229ef803f">
+                    <div class="card-body text-center" style="background-color: rgb(242, 242, 242);">
+                        <h6 class="card-text" style="font-size: 13px;">Hunter x Hunter (2011)</h6><span
+                            class="badge bg-success">Rating : 9.1</span><span
+                            class="badge bg-secondary text-light">Episodes : 148</span><a id="moreBtn"
+                            href="https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011" class="btn btn-primary mt-2"
+                            style="margin: auto; width: 40%; font-size: 12px; display: block;">Read More</a>
+                    </div>
+                </div>
+            </article>
+        </section>
     </div>
 
 
@@ -65,11 +119,33 @@
 
 
 
-
-
-
-
-
+    <div> </div>
+    <div class=" footer-basic">
+        <footer>
+            <div class="social">
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-snapchat"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="index.html">Home</a></li>
+                <li class="list-inline-item"><a href="search.html">Search</a></li>
+                <li class="list-inline-item"><a href="rankings.html">Rankings</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">AnimeLeaf © 2021</p>
+        </footer>
+    </div>
     <section>
         <script src="searchscrpt.js">
         </script>

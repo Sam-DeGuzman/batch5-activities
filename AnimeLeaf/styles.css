@@ -11,6 +11,10 @@ nav {
   padding-right: 40px;
 }
 
+.nav-item{
+  margin-left: 100px;
+}
+
 .card-img-top {
   /* max-height: 255px;
   min-height: 255px; */
@@ -22,8 +26,30 @@ nav {
 .badge{
   margin-left: 7px;
 }
+#welcome-img{
+  max-width: 20%;
+  min-width: 20%;
+  animation-name: move-up;
+  animation-duration: 1s;
+  /* Adds transition */
+  transition: 0.3s;
+}
+#mikasa-img{
+  margin-top: -15px;
+  max-width: 50%;
+  animation-name: move-up;
+  animation-duration: 1s;
+  /* Adds transition */
+  transition: 0.3s;
+}
 
-#cardArticle ,#welcome-img{
+#cardArticle {
+  animation-name: move-up;
+  animation-duration: 1s;
+  /* Adds transition */
+  transition: 0.3s;
+}
+#cardArticle2 {
   animation-name: move-up;
   animation-duration: 1s;
   /* Adds transition */
@@ -39,6 +65,7 @@ nav {
 
 #sasuke {
   object-fit: contain;
+  max-width: 75%;
   float: right;
   animation-name: sasuke;
   animation-duration: 1.5s;
@@ -47,6 +74,7 @@ nav {
 }
 
 #naruto {
+  max-width: 75%;
   object-fit: contain;
   float: left;
   animation-name: naruto;
@@ -55,79 +83,14 @@ nav {
   transition: 0.2s;
 }
 
-
-
-@keyframes move-up {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+#inputGroupSelect01{
+  max-width: 20%;
+  min-width: 120px;
 }
-
-@keyframes sasuke {
-  from {
-      opacity: 0;
-      transform: translateX(-500px);
-  }
-
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-@keyframes naruto {
-  
-  from {
-      opacity: 0;
-      transform: translateX(500px);
-  }
-
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-@media screen and (max-width:600px) {
-  .card-img-top {
-     max-height: 255px;
-    min-height: 255px; 
-    object-fit: contain;
-  }
-
-  nav {
-      padding-left: 30px;
-      padding-right: 20px;
-  }
-
-  .row>article{
-    justify-self: center;
-  }
-
-  
-}
-
-@media screen and (max-width:769px){
-  .card-img-top {
-    max-height: 255px;
-   min-height: 255px; 
-   object-fit: contain;
- }
-
-  #sasuke,#naruto{
-    display: none;
-  }
-  
-}
-
 
 /* Footer Styles */
 .footer-basic {
+  width: 100%;
   margin-top: 60px ;
   padding:40px 0;
   background-color:rgba(127,22,16,100);
@@ -199,7 +162,7 @@ nav {
 
 .ribbon-green {
   font: bold 15px Sans-Serif;
-  color: #333;
+  color: #000;
   text-align: center;
   text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
   transform: rotate(-45deg);
@@ -214,7 +177,7 @@ nav {
   background-image:    -moz-linear-gradient(top, #ddc913, #ebe702); 
   background-image:     -ms-linear-gradient(top, #ddc913, #ebe702); 
   background-image:      -o-linear-gradient(top, #ddc913, #ebe702); 
-  color: #6a6340;
+  color: #000;
   box-shadow:0px 0px 3px rgba(0,0,0,0.3);
 }
 
@@ -242,14 +205,87 @@ nav {
   padding: 15px;
 }
 
-.prev .next{
-  background-color: #f1f1f1;
-  border: 2px solid #000;
+
+
+/* Keyframes and Media Queries */
+
+@keyframes move-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.hidden {
-  display: none;
+@keyframes sasuke {
+  from {
+      opacity: 0;
+      transform: translateX(-500px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
 }
-.show{
-  display: block;
+
+@keyframes naruto {
+  
+  from {
+      opacity: 0;
+      transform: translateX(500px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@media screen and (max-width:600px) {
+  .card-img-top {
+     max-height: 255px;
+    min-height: 255px; 
+    object-fit: contain;
+  }
+  .navbar-nav{
+    float: right;
+    margin-right: 120px;
+  }
+  nav {
+      padding-left: 30px;
+      padding-right: 20px;
+  }
+
+  .row>article{
+    justify-self: center;
+  }
+
+}
+
+@media screen and (max-width:769px){
+  .navbar-nav{
+    float: right;
+    margin-right: 120px;
+  }
+  .card-img-top {
+    max-height: 255px;
+   min-height: 255px; 
+   object-fit: contain;
+ }
+
+  #sasuke,#naruto{
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width:1000px){
+  .navbar-nav{
+    float: right;
+    margin-right: 120px;
+  }
 }

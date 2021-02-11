@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top"
         style="background-color:rgba(127,22,16,100) !important;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="font-family: 'Potta One', cursive;">
+            <a class="navbar-brand" href="index.html" style="font-family: 'Potta One', cursive;">
                 <img src="assets/imgs/logo.png" alt="" width="30" height="30" class="d-inline-block align-top"
                     id="logo">
                 AnimeLeaf
@@ -55,10 +55,10 @@
     <div class="container" style="margin-bottom:0px;">
         <div class="row justify-content-center">
             <div class="col-md-4 ">
-                <img id="sasuke" src="assets/imgs/sasuke.png" alt="" width="180px">
+                <img id="sasuke" src="assets/imgs/sasuke.png" alt="" width="100%">
             </div>
             <div class="col-md-4">
-                <img id="naruto" src="assets/imgs/naruto.png" alt="" width="180px">
+                <img id="naruto" src="assets/imgs/naruto.png" alt="" width="100%">
             </div>
         </div>
     </div>
@@ -67,7 +67,7 @@
     <div class="container">
         <section class="row">
             <!-- Anime or Manga Option-->
-            <div id="option-btns" class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <div id="option-btns" class="btn-group btn-group" role="group" aria-label="Basic example">
                 <button type="button" id="anime" class="btn btn-primary active">Anime</button>
                 <button type="button" id="manga" class="btn btn-primary">Manga</button>
             </div>
@@ -76,7 +76,7 @@
 
         <!-- Top Options for Animes -->
         <section class="row">
-            <div id="anime-btns" class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <div id="anime-btns" class="btn-group btn-group" role="group" aria-label="Basic example">
                 <button type="button" id="airing" class="btn btn-secondary">Top Airing</button>
                 <button type="button" id="upcoming" class="btn btn-secondary">Top Upcoming</button>
                 <button type="button" id="tv" class="btn btn-secondary">Top TV Series</button>
@@ -87,7 +87,7 @@
 
         <!-- Top Options for Mangas -->
         <section class="row">
-            <div id="manga-btns" class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <div id="manga-btns" class="btn-group btn-group" role="group" aria-label="Basic example">
                 <button type="button" id="manga" class="btn btn-secondary">Top Manga</button>
                 <button type="button" id="novels" class="btn btn-secondary">Top Novels</button>
                 <button type="button" id="oneshots" class="btn btn-secondary">Top Oneshots</button>
@@ -100,14 +100,20 @@
         <section class="row" id="rankingContent" style="margin-top:10px;">
 
         </section>
-        <section id="pagination" class="row justify-content-center mt-2">
+        <section class="row justify-content-center" style="margin-top: 10px;">
+            <div class="col-md-2">
+                <button class="btn btn-success" id="scrollTop">Scroll to Top ^</button>
+            </div>
+        </section>
+
+        <!-- <section id="pagination" class="row justify-content-center mt-2">
             <div class="col-md-4 text-center">
                 <span class="btn btn-primary" style="margin-right: 10px;" id="prev">Prev</span>
                 <span class="pageNum" id="pgNum">2</span>
                 <span class="btn btn-primary" style="margin-left: 10px;" id="next">Next</span>
             </div>
 
-        </section>
+        </section> -->
     </div>
 
 

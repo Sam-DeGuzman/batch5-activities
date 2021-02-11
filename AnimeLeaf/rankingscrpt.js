@@ -6,6 +6,7 @@ let mangaBtnDisp = document.getElementById('manga-btns');
 let animeBtns = document.querySelectorAll('#anime-btns button');
 let mangaBtns = document.querySelectorAll('#manga-btns button');
 let optionBtns = document.querySelectorAll('#option-btns button');
+let scrollTop = document.getElementById('scrollTop');
 let prevBtn = document.getElementById('prev');
 let pgNum = document.getElementById('pgNum');
 let nextBtn = document.getElementById('next');
@@ -23,8 +24,8 @@ let target;
 let currentPage;
 let typeVariable;
 
-const maxItems = 10;
-let index = 1;
+// const maxItems = 10;
+// let index = 1;
 
 
 mangaBtnDisp.style.display = "none";
@@ -33,7 +34,7 @@ loadReleasetoDisplay("anime");
 
 animeBtns.forEach(item => {
     item.addEventListener('click', event => {
-        index = 1;
+
         currentPage = undefined;
         deactOtherBtns(event.target.id, animeBtns);
         setActive = document.getElementById(`${event.target.id}`);
@@ -44,7 +45,7 @@ animeBtns.forEach(item => {
 
 mangaBtns.forEach(item => {
     item.addEventListener('click', event => {
-        index = 1;
+
         currentPage = undefined;
         deactOtherBtns(event.target.id, mangaBtns);
         setActive = document.getElementById(`${event.target.id}`);
@@ -58,7 +59,7 @@ mangaBtns.forEach(item => {
 
 optionBtns.forEach(item => {
     item.addEventListener('click', event => {
-        index = 1;
+
         currentPage = undefined;
         deactOtherBtns(event.target.id, optionBtns);
         setActive = document.getElementById(`${event.target.id}`);
@@ -76,6 +77,10 @@ optionBtns.forEach(item => {
     }
     )
 });
+
+scrollTop.addEventListener('click', function () {
+    document.documentElement.scrollTop = 0;
+})
 
 function loadReleasetoDisplay(target_id, subtype = '') {
     var ids = target_id;
@@ -191,52 +196,7 @@ function loadReleasetoDisplay(target_id, subtype = '') {
                 cardArticle.append(cardDiv);
                 RANKINGCONTAINER.appendChild(cardArticle)
             }
-            let pagination = Math.ceil(containerChildren.length / maxItems);
 
-            check();
-
-            pgNum.innerHTML = index;
-
-            for (let i = 0; i < containerChildren.length; i++) {
-                containerChildren[i].classList.remove("show");
-                containerChildren[i].classList.add("hidden");
-                if (i >= (index * maxItems) - maxItems && i < index * maxItems) {
-                    containerChildren[i].classList.remove("hidden");
-                    containerChildren[i].classList.add("show");
-                }
-            }
-
-            prevBtn.addEventListener('click', function () {
-                if (index > 1) {
-                    --index;
-                    check();
-                    reload2();
-                }
-
-            });
-
-            nextBtn.addEventListener('click', function () {
-                ++index;
-                check();
-                reload2();
-            });
-
-            function check() {
-                if (index === 1) {
-                    prevBtn.classList.add("disabled");
-                }
-                else {
-                    prevBtn.classList.remove("disabled");
-                }
-
-
-                if (index === pagination) {
-                    nextBtn.classList.add("disabled")
-                }
-                else {
-                    nextBtn.classList.remove("disabled");
-                }
-            };
         })
 }
 function reload2() {
@@ -270,7 +230,14 @@ function clearRankingDiv() {
 /* const pagination = Math.ceil(containerChildren.length / maxItems);
             check();
             reload2();
-
+  for (let i = 0; i < containerChildren.length; i++) {
+                containerChildren[i].classList.remove("show");
+                containerChildren[i].classList.add("hidden");
+                if (i >= (index * maxItems) - maxItems && i < index * maxItems) {
+                    containerChildren[i].classList.remove("hidden");
+                    containerChildren[i].classList.add("show");
+                }
+            }
             function reload2() {
                 for (let i = 0; i < containerChildren.length; i++) {
                     containerChildren[i].classList.remove("show");
@@ -283,6 +250,29 @@ function clearRankingDiv() {
                 pgNum.innerHTML = index;
                 document.documentElement.scrollTop = 0;
             }
+            let pagination = Math.ceil(containerChildren.length / maxItems);
+
+            check();
+
+            pgNum.innerHTML = index;
+
+
+
+            prevBtn.addEventListener('click', function () {
+                if (index > 1) {
+                    --index;
+                    check();
+                    reload2();
+                }
+
+            });
+
+            nextBtn.addEventListener('click', function () {
+                ++index;
+                check();
+                reload2();
+            });
+
             function check() {
                 if (index === 1) {
                     prevBtn.classList.add("disabled");
@@ -298,8 +288,8 @@ function clearRankingDiv() {
                 else {
                     nextBtn.classList.remove("disabled");
                 }
+            };
 
-
-            }; */
+            */
 
 
