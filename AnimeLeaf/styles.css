@@ -1,0 +1,255 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  padding-top: 60px;
+}
+nav {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.card-img-top {
+  /* max-height: 255px;
+  min-height: 255px; */
+  width: 100%;
+  height: 20vw;
+  object-fit: contain;
+}
+
+.badge{
+  margin-left: 7px;
+}
+
+#cardArticle ,#welcome-img{
+  animation-name: move-up;
+  animation-duration: 1s;
+  /* Adds transition */
+  transition: 0.3s;
+}
+
+#rankings-img{
+  animation-name: move-up;
+  animation-duration: 1s;
+  /* Adds transition */
+  transition: 0.3s;
+}
+
+#sasuke {
+  object-fit: contain;
+  float: right;
+  animation-name: sasuke;
+  animation-duration: 1.5s;
+  /* Adds transition */
+  transition: 0.2s;
+}
+
+#naruto {
+  object-fit: contain;
+  float: left;
+  animation-name: naruto;
+  animation-duration: 1.5s;
+  /* Adds transition */
+  transition: 0.2s;
+}
+
+
+
+@keyframes move-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sasuke {
+  from {
+      opacity: 0;
+      transform: translateX(-500px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes naruto {
+  
+  from {
+      opacity: 0;
+      transform: translateX(500px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@media screen and (max-width:600px) {
+  .card-img-top {
+     max-height: 255px;
+    min-height: 255px; 
+    object-fit: contain;
+  }
+
+  nav {
+      padding-left: 30px;
+      padding-right: 20px;
+  }
+
+  .row>article{
+    justify-self: center;
+  }
+
+  
+}
+
+@media screen and (max-width:769px){
+  .card-img-top {
+    max-height: 255px;
+   min-height: 255px; 
+   object-fit: contain;
+ }
+
+  #sasuke,#naruto{
+    display: none;
+  }
+  
+}
+
+
+/* Footer Styles */
+.footer-basic {
+  margin-top: 60px ;
+  padding:40px 0;
+  background-color:rgba(127,22,16,100);
+  color:#f1f1f1;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:20px;
+  width:40px;
+  height:40px;
+  line-height:42px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+.ribbon-wrapper-green {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+}
+
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  transform: rotate(-45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -30px;
+  top: 10px;
+  width: 130px;
+  background-color: #e4ac14;
+  background-image: gradient(linear, left top, left bottom, from(#ddc913), to(#ebe702)); 
+  background-image: -webkit-linear-gradient(top, #ddc913, #ebe702); 
+  background-image:    -moz-linear-gradient(top, #ddc913, #ebe702); 
+  background-image:     -ms-linear-gradient(top, #ddc913, #ebe702); 
+  background-image:      -o-linear-gradient(top, #ddc913, #ebe702); 
+  color: #6a6340;
+  box-shadow:0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+
+
+.ribbon-green:after {
+  right: 0;
+}​
+
+.container #pagination{
+  width: 100%;
+  float:left;
+  padding: 15px;
+}
+
+.prev .next{
+  background-color: #f1f1f1;
+  border: 2px solid #000;
+}
+
+.hidden {
+  display: none;
+}
+.show{
+  display: block;
+}
