@@ -65,6 +65,7 @@ optionBtns.forEach(item => {
         setActive = document.getElementById(`${event.target.id}`);
         setActive.classList.add('active');
         target = event.target.id;
+        removeBtnActivity(target);
         if (target === 'anime') {
             mangaBtnDisp.style.display = 'none';
             animeBtnDisp.style.display = 'flex';
@@ -77,6 +78,19 @@ optionBtns.forEach(item => {
     }
     )
 });
+
+function removeBtnActivity(selected) {
+    if (selected === 'anime') {
+        animeBtns.forEach(item => {
+            item.classList.remove('active');
+        })
+    }
+    else {
+        mangaBtns.forEach(item => {
+            item.classList.remove('active');
+        })
+    }
+}
 
 scrollTop.addEventListener('click', function () {
     document.documentElement.scrollTop = 0;

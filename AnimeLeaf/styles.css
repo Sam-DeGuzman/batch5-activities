@@ -26,23 +26,27 @@ nav {
 .badge{
   margin-left: 7px;
 }
+
 #welcome-img{
-  max-width: 20%;
-  min-width: 20%;
-  animation-name: move-up;
-  animation-duration: 1s;
-  /* Adds transition */
-  transition: 0.3s;
-}
-#mikasa-img{
-  margin-top: -15px;
-  max-width: 50%;
-  animation-name: move-up;
+  max-width: 15%;
+  min-width: 15%;
+  animation-name: move-up2;
   animation-duration: 1s;
   /* Adds transition */
   transition: 0.3s;
 }
 
+#mikasa-img{
+  margin-top: -15px;
+  max-width: 35%;
+  animation-name: move-up;
+  animation-duration: 1s;
+  /* Adds transition */
+  transition: 0.3s;
+}
+#day-btns-sm{
+  display: none;
+}
 #cardArticle {
   animation-name: move-up;
   animation-duration: 1s;
@@ -83,6 +87,32 @@ nav {
   transition: 0.2s;
 }
 
+#tanjiro{
+  animation-name: move-up2;
+  animation-duration: 2s;
+  /* Adds transition */
+  transition: 0.5s;
+}
+#deku{
+  animation-name: move-up2;
+  animation-duration: 3s;
+  /* Adds transition */
+  transition: 1s;
+}
+#asta{
+  animation-name: move-up2;
+  animation-duration: 4s;
+  /* Adds transition */
+  transition: 1.5s;
+}
+#weeklyH4{
+  margin-top: -16px;
+  position: relative;
+  background-color:rgba(127,22,16,100);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
 #inputGroupSelect01{
   max-width: 20%;
   min-width: 120px;
@@ -220,6 +250,18 @@ nav {
   }
 }
 
+@keyframes move-up2 {
+  from {
+    opacity: 0;
+    transform: translateY(95px);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes sasuke {
   from {
       opacity: 0;
@@ -246,6 +288,15 @@ nav {
 }
 
 @media screen and (max-width:600px) {
+  #welcome-img{
+    max-width: 25%;
+    min-width: 25%;
+  }
+  
+  #mikasa-img{
+    margin-top: -15px;
+    max-width: 45%;
+  }
   .card-img-top {
      max-height: 255px;
     min-height: 255px; 
@@ -263,10 +314,24 @@ nav {
   .row>article{
     justify-self: center;
   }
-
+  
 }
 
 @media screen and (max-width:769px){
+  #welcome-img{
+    max-width: 25%;
+    min-width: 25%;
+  }
+  
+  #mikasa-img{
+    margin-top: -15px;
+    max-width: 45%;
+  }
+
+  #topHeads{
+    display: none;
+  }
+
   .navbar-nav{
     float: right;
     margin-right: 120px;
@@ -280,6 +345,12 @@ nav {
   #sasuke,#naruto{
     display: none;
   }
+  #day-btns{
+    display: none;
+  }
+  #day-btns-sm{
+    display: flex;
+  }
   
 }
 
@@ -288,4 +359,5 @@ nav {
     float: right;
     margin-right: 120px;
   }
+
 }

@@ -11,6 +11,7 @@ let article = document.getElementById('cardArticle');
 let article2 = document.getElementById('cardArticle2');
 
 
+
 SEARCH_BTN.addEventListener(
     'click', function () {
         TEMP_IMG.style.display = 'none';
@@ -36,6 +37,17 @@ SEARCH_BTN.addEventListener(
 
     }
 )
+
+SEARCH_INPUT.addEventListener("keyup", function (event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        SEARCH_BTN.click();
+    }
+});
+
 function clr() {
     while (SEARCHCONTAINER.firstChild) {
         SEARCHCONTAINER.removeChild(SEARCHCONTAINER.firstChild);
