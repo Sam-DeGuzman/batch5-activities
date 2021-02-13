@@ -185,6 +185,7 @@ function loadReleasetoDisplay(target_id, subtype = '') {
                 moreBtn.href = currentPage[i].url;
                 moreBtn.classList.add(...primBtnCls);
                 moreBtn.innerHTML = 'Read More';
+                moreBtn.target = '_blank';
                 moreBtn.style.margin = 'auto';
                 moreBtn.style.width = '40%';
                 moreBtn.style.fontSize = '12px';

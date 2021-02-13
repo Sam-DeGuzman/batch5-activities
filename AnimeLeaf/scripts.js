@@ -49,6 +49,7 @@ function loadReleasetoDisplay(target_id) {
         .then(() => dailyRelease = obj[dayVariable])
         .then(() => clearDisplayDiv())
         .then(() => {
+            // console.log(dailyRelease);
             for (i = 0; i < dailyRelease.length; i++) {
                 let cardArticle = document.createElement("article");
                 cardArticle.classList.add(...cardClasses);
@@ -106,6 +107,7 @@ function loadReleasetoDisplay(target_id) {
                 moreBtn.href = dailyRelease[i].url;
                 moreBtn.classList.add(...primBtnCls);
                 moreBtn.innerHTML = 'Read More';
+                moreBtn.target = '_blank';
                 moreBtn.style.margin = 'auto';
                 moreBtn.style.width = '40%';
                 moreBtn.style.fontSize = '12px';

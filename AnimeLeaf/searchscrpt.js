@@ -6,10 +6,18 @@ const TEMP_IMG = document.getElementById('tempImg-container');
 const SEARCH_INFO = document.getElementById('result-info');
 const SEARCH_QUERY = document.getElementById('query');
 
+let cardClasses = ['col-sm-6', 'col-md-4', 'col-lg-3', 'g-4'];
+let cardInfoClasses = ['card-body', 'text-center'];
+let successBdgCls = ['badge', 'bg-success'];  //0-3.33
+let dangerBdgCls = ['badge', 'bg-danger'];//3.34-6.66
+let warningBdgCls = ['badge', 'bg-warning'];//6.67-10
+let infoBdgCls = ['badge', 'bg-secondary', 'text-light'];
+let primBtnCls = ['btn', 'btn-primary', 'mt-2'];
+
 
 let article = document.getElementById('cardArticle');
 let article2 = document.getElementById('cardArticle2');
-
+let currentPage;
 
 
 SEARCH_BTN.addEventListener(
@@ -22,14 +30,9 @@ SEARCH_BTN.addEventListener(
         }
         else {
             SEARCH_INFO.style.display = 'block';
-            if (SEARCH_INPUT.value === 'SNK') {
-                article2.style.display = 'none';
-                article.style.display = 'block';
-            }
-            if (SEARCH_INPUT.value === 'HXH') {
-                article.style.display = 'none';
-                article2.style.display = 'block';
-            }
+            /* alert('Empty Input Field!' + SEARCHTYPE.value + " " + SEARCH_INPUT.value); */
+
+            loadSearchtoDisplay(SEARCHTYPE.value, SEARCH_INPUT.value);
 
             SEARCH_QUERY.innerText = SEARCH_INPUT.value;
 
@@ -54,17 +57,17 @@ function clr() {
     }
 }
 
-
-
-function loadSearchtoDisplay(type,) {
-    var ids = target_id;
+function loadSearchtoDisplay(type, query) {
+    /*   var origStr = query;
+      var slicedStr = origStr.substring(1, origStr.length - 1); */
     var obj;
-    fetch(`https://api.jikan.moe/v3/search/${type}?q=${query}&page=1&genre=12&genre_exclude=0`)
+    fetch(`https://api.jikan.moe/v3/search/${type}?q=${query}&page=1&genre=12,9&genre_exclude=0`)
         .then(response => response.json())
         .then(data => obj = data)
-        .then(() => currentPage = obj['top'])
-        .then(() => clearRankingDiv())
+        .then(() => currentPage = obj['results'])
+        .then(() => clearSearchDiv())
         .then(() => {
+            console.log(currentPage);
             for (i = 0; i < currentPage.length; i++) {
                 let cardArticle = document.createElement("article");
                 cardArticle.classList.add(...cardClasses);
@@ -152,7 +155,7 @@ function loadSearchtoDisplay(type,) {
                 cardBodyDiv.appendChild(cardTitle);
                 cardBodyDiv.appendChild(ratingSpan);
 
-                if (ids === 'anime') {
+                if (type === 'anime') {
                     cardBodyDiv.appendChild(epSpan);
                 }
                 else {
@@ -173,3 +176,10 @@ function loadSearchtoDisplay(type,) {
 
         })
 }
+function clearSearchDiv() {
+    while (SEARCHCONTAINER.firstChild) {
+        SEARCHCONTAINER.removeChild(SEARCHCONTAINER.firstChild);
+    }
+}
+
+/* loadSearchtoDisplay('anime', 'Naruto'); */
