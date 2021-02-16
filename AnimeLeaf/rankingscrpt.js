@@ -1,5 +1,4 @@
 const RANKINGCONTAINER = document.querySelector('#rankingContent');
-const containerChildren = RANKINGCONTAINER.children;
 
 let animeBtnDisp = document.getElementById('anime-btns');
 let mangaBtnDisp = document.getElementById('manga-btns');
@@ -19,13 +18,15 @@ let successBdgCls = ['badge', 'bg-success'];  //0-3.33
 let dangerBdgCls = ['badge', 'bg-danger'];//3.34-6.66
 let warningBdgCls = ['badge', 'bg-warning'];//6.67-10
 let infoBdgCls = ['badge', 'bg-secondary', 'text-light'];
+let infoBdgCls2 = ['badge', 'bg-info', 'text-dark'];
+let darkBtnCls = ['badge', 'btn-dark', 'text-light'];
 
 let target;
 let currentPage;
 let typeVariable;
 
-// const maxItems = 10;
-// let index = 1;
+const maxItems = 10;
+let index = 1;
 
 
 mangaBtnDisp.style.display = "none";
@@ -34,7 +35,6 @@ loadReleasetoDisplay("anime");
 
 animeBtns.forEach(item => {
     item.addEventListener('click', event => {
-
         currentPage = undefined;
         deactOtherBtns(event.target.id, animeBtns);
         setActive = document.getElementById(`${event.target.id}`);
@@ -45,7 +45,6 @@ animeBtns.forEach(item => {
 
 mangaBtns.forEach(item => {
     item.addEventListener('click', event => {
-
         currentPage = undefined;
         deactOtherBtns(event.target.id, mangaBtns);
         setActive = document.getElementById(`${event.target.id}`);
@@ -139,6 +138,21 @@ function loadReleasetoDisplay(target_id, subtype = '') {
                 }
                 cardTitle.innerHTML = title;
 
+                let typeSpan = document.createElement('span');
+                typeSpan.style.display = 'inline-block';
+                typeSpan.style.width = '40%';
+                let typ = currentPage[i].type;
+                typeSpan.classList.add(...infoBdgCls2);
+                typeSpan.innerHTML = 'Type : ' + typ;
+
+                let rankSpan = document.createElement('span');
+                rankSpan.style.display = 'inline-block';
+                rankSpan.style.width = '40%';
+                let rank = currentPage[i].rank;
+
+                rankSpan.classList.add(...warningBdgCls);
+
+                rankSpan.innerHTML = 'Rank : ' + rank;
 
                 let ratingSpan = document.createElement('span');
                 let rating = currentPage[i].score;
@@ -160,11 +174,14 @@ function loadReleasetoDisplay(target_id, subtype = '') {
 
                 let epSpan = document.createElement('span');
                 let episodes = currentPage[i].episodes
+
                 if (episodes === null) {
+                    episodes = 'N/A';
                     epSpan.classList.add(...dangerBdgCls);
                 }
+
                 else {
-                    epSpan.classList.add(...infoBdgCls);
+                    epSpan.classList.add(...darkBtnCls);
                 }
                 epSpan.innerHTML = 'Episodes : ' + episodes;
 
@@ -172,25 +189,32 @@ function loadReleasetoDisplay(target_id, subtype = '') {
                 let volumes = currentPage[i].volumes;
 
                 if (volumes === null || volumes === undefined) {
+                    volumes = 'N/A';
                     volSpan.classList.add(...dangerBdgCls);
                 }
                 else {
-                    volSpan.classList.add(...infoBdgCls);
+                    volSpan.classList.add(...darkBtnCls);
                 }
 
-                volSpan.innerHTML = 'Volumes : ' + volumes;
+                volSpan.innerHTML = 'Vol. : ' + volumes;
 
                 let moreBtn = document.createElement('a');
                 moreBtn.id = "moreBtn";
                 moreBtn.href = currentPage[i].url;
                 moreBtn.classList.add(...primBtnCls);
-                moreBtn.innerHTML = 'Read More';
+                moreBtn.innerHTML = 'Read More at AnimeList';
                 moreBtn.target = '_blank';
                 moreBtn.style.margin = 'auto';
-                moreBtn.style.width = '40%';
+                moreBtn.style.width = '60%';
                 moreBtn.style.fontSize = '12px';
                 moreBtn.style.display = 'block'
                 cardBodyDiv.appendChild(cardTitle);
+                cardBodyDiv.appendChild(typeSpan);
+
+
+                cardBodyDiv.appendChild(rankSpan);
+
+
                 cardBodyDiv.appendChild(ratingSpan);
 
                 if (ids === 'anime') {
@@ -199,10 +223,13 @@ function loadReleasetoDisplay(target_id, subtype = '') {
                 else {
                     cardBodyDiv.appendChild(volSpan);
                 }
+
                 cardBodyDiv.appendChild(moreBtn);
 
-                let rank = currentPage[i].rank;
                 if (rank === 1) {
+                    rankSpan.classList.remove(...warningBdgCls);
+                    rankSpan.classList.add(...dangerBdgCls);
+                    rankSpan.classList.add('blink_me');
                     cardDiv.appendChild(ribbonDiv);
                 }
 
@@ -211,7 +238,16 @@ function loadReleasetoDisplay(target_id, subtype = '') {
                 cardArticle.append(cardDiv);
                 RANKINGCONTAINER.appendChild(cardArticle)
             }
+            let containerChildren = RANKINGCONTAINER.children;
 
+            for (let i = 0; i < containerChildren.length; i++) {
+                containerChildren[i].classList.remove("show");
+                containerChildren[i].classList.add("hide");
+                if (i >= (index * maxItems) - maxItems && i < index * maxItems) {
+                    containerChildren[i].classList.remove("hide");
+                    containerChildren[i].classList.add("show");
+                }
+            }
         })
 }
 function reload2() {

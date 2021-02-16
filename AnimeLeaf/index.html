@@ -59,6 +59,31 @@
             </div>
         </div>
     </nav>
+
+    <!-- Button trigger modal -->
+    <!--  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modalBtn">
+        Launch demo modal
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" id="title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img class="modal-img" src="https://cdn.myanimelist.net/images/anime/1000/110531.jpg" alt="">
+                    <span style="font-family: 'Oswald', sans-serif; font-size: 20px; border: 0px;">Genres :</span>
+                    <section class="genres">
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row text-center justify-content-center">
             <h2 class="display-5 text-center mt-5"
@@ -85,7 +110,9 @@
             </div>
 
         </div>
+
         <hr width="70%" style="margin: auto;">
+
         <div class="container mt-3 justify-content-center">
 
             <!-- Foreground -->
@@ -118,12 +145,11 @@
             <section class="row" id="releaseContent">
 
             </section>
+
+            <div style="display: flex; justify-content: center; margin-top: 10px;">
+                <button class="btn btn-success" id="scrollTop" style="margin:auto;">Scroll to Top ⬆️</button>
+            </div>
         </div>
-
-
-
-
-
 
         <div class="footer-basic">
             <footer>
