@@ -111,6 +111,7 @@ a.nav-link{
 }
 #weeklyH4{
   margin-top: -16px;
+  width: 100%;
   position: relative;
   background-color:rgba(127,22,16,100);
   color: #fff;
