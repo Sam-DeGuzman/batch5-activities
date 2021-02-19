@@ -32,7 +32,6 @@ let index = 1;
 mangaBtnDisp.style.display = "none";
 loadReleasetoDisplay("anime");
 
-
 animeBtns.forEach(item => {
     item.addEventListener('click', event => {
         currentPage = undefined;
