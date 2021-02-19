@@ -40,7 +40,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 1. [Banking App Project](https://ddcmendoza.github.io/Banking_App/index.html) - A pair programming project with Dave Mendoza, this is a Banking App using Javascript with DOM Manipulation and localStorage. 
 
 ##Front-End Final Project
-1. [AnimeLeaf](https://sam-deguzman.github.io/batch5-activities/AnimeLeaf/index.html) - Final Project for Front-end development, I've chosen to make a site for viewing information about Anime and Manga using Jikan API.
+1. [AnimeLeaf](https://sam-deguzman.github.io/batch5-activities/AnimeLeaf/index.html) - Final Project for Front-end development (uses Jikan API).
 <!---```### Support or Contact```--->
 
 <!---Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.--->
