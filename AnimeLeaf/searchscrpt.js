@@ -15,7 +15,7 @@ let dangerBdgCls = ['badge', 'bg-danger'];//3.34-6.66
 let warningBdgCls = ['badge', 'bg-warning'];//6.67-10
 let infoBdgCls = ['badge', 'bg-secondary', 'text-light'];
 let infoBdgCls2 = ['badge', 'bg-info', 'text-dark'];
-let primBtnCls = ['btn', 'btn-primary', 'mt-2'];
+let primBtnCls = ['btn', 'text-light', 'mt-2'];
 let darkBtnCls = ['badge', 'btn-dark', 'text-light'];
 
 const maxItems = 20;
@@ -119,22 +119,24 @@ function loadSearchtoDisplay(type, query) {
                 let typ = currentPage[i].type;
                 typeSpan.classList.add(...infoBdgCls2);
                 typeSpan.innerHTML = 'Type : ' + typ;
+                typeSpan.style.display = 'inline-block';
 
-                let r18Span = document.createElement('span');
+                let ratedSpan = document.createElement('span');
+                ratedSpan.style.display = 'inline-block';
                 R = currentPage[i].rated;
 
                 if (R === 'G') {
-                    r18Span.classList.add(...successBdgCls);
+                    ratedSpan.classList.add(...successBdgCls);
                 }
                 else if (R === 'PG-13') {
-                    r18Span.classList.add(...warningBdgCls);
+                    ratedSpan.classList.add(...warningBdgCls);
                 }
                 else {
-                    r18Span.classList.add(...dangerBdgCls);
+                    ratedSpan.classList.add(...dangerBdgCls);
                 }
 
 
-                r18Span.innerHTML = 'Rating : ' + R;
+                ratedSpan.innerHTML = 'Rating : ' + R;
 
                 let pubSpan = document.createElement('span');
                 pub = currentPage[i].publishing;
@@ -188,9 +190,11 @@ function loadSearchtoDisplay(type, query) {
 
                 let moreBtn = document.createElement('a');
                 moreBtn.id = "moreBtn";
+                moreBtn.style.backgroundColor = '#c64e0e';
                 moreBtn.href = currentPage[i].url;
+                moreBtn.target = '_blank';
                 moreBtn.classList.add(...primBtnCls);
-                moreBtn.innerHTML = 'Read More at AnimeList';
+                moreBtn.innerHTML = 'Read More at MyAnimeList';
                 moreBtn.style.margin = 'auto';
                 moreBtn.style.width = '60%';
                 moreBtn.style.fontSize = '12px';
@@ -199,7 +203,7 @@ function loadSearchtoDisplay(type, query) {
                 cardBodyDiv.appendChild(typeSpan);
 
                 if (type === 'anime') {
-                    cardBodyDiv.append(r18Span);
+                    cardBodyDiv.append(ratedSpan);
                 }
                 else {
                     cardBodyDiv.appendChild(pubSpan);

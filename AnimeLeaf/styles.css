@@ -10,6 +10,9 @@ nav {
   padding-left: 40px;
   padding-right: 40px;
 }
+a.nav-link{
+  justify-self: center;
+}
 
 .nav-item{
   margin-left: 100px;
@@ -59,15 +62,9 @@ nav {
   animation-duration: 1s;
   /* Adds transition */
   transition: 0.3s;
+  justify-content: center;
 }
 #cardArticle2 {
-  animation-name: move-up;
-  animation-duration: 1s;
-  /* Adds transition */
-  transition: 0.3s;
-}
-
-#rankings-img{
   animation-name: move-up;
   animation-duration: 1s;
   /* Adds transition */
@@ -102,13 +99,13 @@ nav {
 }
 #deku{
   animation-name: move-up2;
-  animation-duration: 3s;
+  animation-duration: 4.5s;
   /* Adds transition */
   transition: 1s;
 }
 #asta{
   animation-name: move-up2;
-  animation-duration: 4s;
+  animation-duration: 6s;
   /* Adds transition */
   transition: 1.5s;
 }
@@ -300,7 +297,41 @@ nav {
   }
 }
 
+@media screen and (max-width:769px){
+  #welcome-img{
+    max-width: 25%;
+    min-width: 25%;
+  }
+  
+  #mikasa-img{
+    margin-top: -15px;
+    max-width: 45%;
+  }
 
+  #topHeads{
+    display: none;
+  }
+
+  .card-img-top {
+    max-height: 255px;
+   min-height: 255px; 
+   object-fit: contain;
+ }
+
+  #sasuke,#naruto{
+    display: none;
+  }
+  #day-btns{
+    display: none;
+  }
+  #option-btns{
+    margin-top: 10px;
+  }
+  #day-btns-sm{
+    display: flex;
+  }
+  
+}
 
 @media screen and (max-width:600px) {
   #welcome-img{
@@ -317,14 +348,6 @@ nav {
     min-height: 255px; 
     object-fit: contain;
   }
-  .navbar-nav{
-    float: right;
-    margin-right: 120px;
-  }
-  nav {
-      padding-left: 30px;
-      padding-right: 20px;
-  }
 
   .row>article{
     justify-self: center;
@@ -332,47 +355,3 @@ nav {
   
 }
 
-@media screen and (max-width:769px){
-  #welcome-img{
-    max-width: 25%;
-    min-width: 25%;
-  }
-  
-  #mikasa-img{
-    margin-top: -15px;
-    max-width: 45%;
-  }
-
-  #topHeads{
-    display: none;
-  }
-
-  .navbar-nav{
-    float: right;
-    margin-right: 120px;
-  }
-  .card-img-top {
-    max-height: 255px;
-   min-height: 255px; 
-   object-fit: contain;
- }
-
-  #sasuke,#naruto{
-    display: none;
-  }
-  #day-btns{
-    display: none;
-  }
-  #day-btns-sm{
-    display: flex;
-  }
-  
-}
-
-@media screen and (max-width:1000px){
-  .navbar-nav{
-    float: right;
-    margin-right: 120px;
-  }
-
-}

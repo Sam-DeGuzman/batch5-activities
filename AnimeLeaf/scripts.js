@@ -15,7 +15,7 @@ let dangerBdgCls = ['badge', 'bg-danger'];//3.34-6.66
 let warningBdgCls = ['badge', 'bg-warning'];//6.67-10
 let infoBdgCls = ['badge', 'bg-secondary', 'text-light'];
 let infoBdgCls2 = ['badge', 'bg-info', 'text-dark'];
-let primBtnCls = ['btn', 'btn-primary'];
+let primBtnCls = ['btn', 'text-light', 'mt-1'];
 let darkBtnCls = ['badge', 'btn-dark', 'text-light'];
 
 let daysBtns = document.querySelectorAll('#day-btns button');
@@ -86,11 +86,14 @@ function loadReleasetoDisplay(target_id) {
                 cardTitle.innerHTML = title;
 
                 let typeSpan = document.createElement('span');
+                typeSpan.style.display = 'inline-block';
                 let type = dailyRelease[i].type;
                 typeSpan.classList.add(...infoBdgCls2);
                 typeSpan.innerHTML = 'Type : ' + type;
+                typeSpan.style.display = 'inline-block'
 
                 let srcSpan = document.createElement('span');
+                srcSpan.style.display = 'inline-block';
                 src = dailyRelease[i].source;
 
                 srcSpan.classList.add(...infoBdgCls);
@@ -129,10 +132,11 @@ function loadReleasetoDisplay(target_id) {
                 let infoDiv = document.createElement('div');
 
                 let moreBtn = document.createElement('a');
+                moreBtn.style.backgroundColor = '#c64e0e';
                 moreBtn.id = "moreBtn";
                 moreBtn.href = dailyRelease[i].url;
                 moreBtn.classList.add(...primBtnCls);
-                moreBtn.innerHTML = 'Read More at AnimeList';
+                moreBtn.innerHTML = 'Read More at MyAnimeList';
                 moreBtn.target = '_blank';
                 moreBtn.style.margin = 'auto';
                 moreBtn.style.width = '60%';

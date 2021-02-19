@@ -140,14 +140,16 @@ function loadReleasetoDisplay(target_id, subtype = '') {
 
                 let typeSpan = document.createElement('span');
                 typeSpan.style.display = 'inline-block';
-                typeSpan.style.width = '40%';
+                typeSpan.style.textAlign = 'center';
+                typeSpan.style.width = '50%';
                 let typ = currentPage[i].type;
                 typeSpan.classList.add(...infoBdgCls2);
                 typeSpan.innerHTML = 'Type : ' + typ;
 
                 let rankSpan = document.createElement('span');
+                rankSpan.style.textAlign = 'center';
                 rankSpan.style.display = 'inline-block';
-                rankSpan.style.width = '40%';
+                rankSpan.style.width = '34%';
                 let rank = currentPage[i].rank;
 
                 rankSpan.classList.add(...warningBdgCls);
@@ -199,10 +201,12 @@ function loadReleasetoDisplay(target_id, subtype = '') {
                 volSpan.innerHTML = 'Vol. : ' + volumes;
 
                 let moreBtn = document.createElement('a');
+                moreBtn.style.backgroundColor = '#c64e0e';
+                moreBtn.style.border = '0px';
                 moreBtn.id = "moreBtn";
                 moreBtn.href = currentPage[i].url;
                 moreBtn.classList.add(...primBtnCls);
-                moreBtn.innerHTML = 'Read More at AnimeList';
+                moreBtn.innerHTML = 'Read More at MyAnimeList';
                 moreBtn.target = '_blank';
                 moreBtn.style.margin = 'auto';
                 moreBtn.style.width = '60%';
