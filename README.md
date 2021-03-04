@@ -43,7 +43,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 1. [AnimeLeaf](https://sam-deguzman.github.io/batch5-activities/AnimeLeaf/index.html) - Final Project for Front-end development (uses Jikan API).
 
 
-###Ruby
+### Ruby
 1. [Activities](https://github.com/Sam-DeGuzman/batch5-activities/RubyActivities)
 <!---```### Support or Contact```--->
 
