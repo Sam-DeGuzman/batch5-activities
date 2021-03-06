@@ -6,4 +6,4 @@ def minimum(list)
     end
     puts current_min
 end
-  print minimum([-12,-23,3,123])  
+  print minimum([-12,-23,3,-123])  
