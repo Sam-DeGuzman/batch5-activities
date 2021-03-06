@@ -17,14 +17,13 @@ module PortableDevice
     def boot
         puts "Booting Linux... "
     end
-
   end
 
   class Phone 
     include PortableDevice
     attr_accessor :bat_level
 
-    def initialize(signal:, bat_level: 10)
+    def initialize(signal:,bat_level:)
         @bat_level, @signal = bat_level , signal
     end
 
@@ -48,7 +47,7 @@ module PortableDevice
     include PortableDevice
     attr_accessor :bat_level
 
-    def initialize(signal:, bat_level: 10)
+    def initialize(signal:, bat_level:10)
         @bat_level, @signal = bat_level , signal
     end
 
@@ -74,7 +73,7 @@ module PortableDevice
 
 
   phone = Phone.new(signal:10, bat_level: 10)
-  laptop = Laptop.new(signal:20,bat_level: 20)
+  laptop = Laptop.new(signal:20)
   computer = Computer.new
 
     phone.bat_level = 12
