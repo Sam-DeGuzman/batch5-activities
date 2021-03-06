@@ -1,4 +1,7 @@
 module PortableDevice
+    attr_writer :bat_level
+    # battery_level || = 0
+
     def battery_level(bat_level)
         puts "Battery: " + bat_level.to_s + "%"
     end
@@ -19,7 +22,7 @@ module PortableDevice
     end
   end
 
-  class Phone 
+class Phone 
     include PortableDevice
     attr_accessor :bat_level
 
@@ -41,9 +44,9 @@ module PortableDevice
         @bat_level = charge(@bat_level)
     end
 
-  end
+end
 
-  class Laptop 
+class Laptop 
     include PortableDevice
     attr_accessor :bat_level
 
@@ -65,11 +68,11 @@ module PortableDevice
         @bat_level = charge(@bat_level)
     end
     
-  end
+end
 
-  class Computer 
+class Computer 
     include ComputeDevice
-  end
+end
 
 
   phone = Phone.new(bat_level: 10)
