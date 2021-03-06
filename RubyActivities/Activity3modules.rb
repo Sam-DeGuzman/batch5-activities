@@ -3,8 +3,8 @@ module PortableDevice
         puts "Battery: " + bat_level.to_s + "%"
     end
 
-    def check_cell_signal(signal)
-        puts "Signal Strength: " + signal.to_s
+    def check_cell_signal
+        puts "Checking signal strength... " 
     end
     
     def charge(bat_level)
@@ -23,8 +23,8 @@ module PortableDevice
     include PortableDevice
     attr_accessor :bat_level
 
-    def initialize(signal:,bat_level:)
-        @bat_level, @signal = bat_level , signal
+    def initialize(bat_level:)
+        @bat_level = bat_level 
     end
 
     def check_battery_level
@@ -34,7 +34,7 @@ module PortableDevice
 
     def check_signal
         print "Phone "
-        check_cell_signal(@signal)
+        check_cell_signal()
     end
 
     def charge_device
@@ -47,8 +47,8 @@ module PortableDevice
     include PortableDevice
     attr_accessor :bat_level
 
-    def initialize(signal:, bat_level:10)
-        @bat_level, @signal = bat_level , signal
+    def initialize(bat_level:10)
+        @bat_level = bat_level 
     end
 
     def check_battery_level
@@ -58,7 +58,7 @@ module PortableDevice
 
     def check_signal
         print "Laptop "
-        check_cell_signal(@signal)
+        check_cell_signal()
     end
 
     def charge_device
@@ -72,8 +72,8 @@ module PortableDevice
   end
 
 
-  phone = Phone.new(signal:10, bat_level: 10)
-  laptop = Laptop.new(signal:20)
+  phone = Phone.new(bat_level: 10)
+  laptop = Laptop.new
   computer = Computer.new
 
     phone.bat_level = 12
@@ -82,7 +82,7 @@ module PortableDevice
 
     #charge phone + 5%
     #i = 0
-    # puts "Phone Charging..."
+    # puts "Phone Charging for 5%..."
     # while i < 5
     #     phone.charge_device
     #     i += 1
@@ -92,14 +92,14 @@ module PortableDevice
 
     laptop.check_battery_level
     #charge laptop + 10%
-    # j = 0
-    # puts "Laptop Charging..."
-    # while j < 10
-    #     laptop.charge_device
-    #     j += 1
-    # end
+    j = 0
+    puts "Laptop Charging for 10%..."
+    while j < 10
+        laptop.charge_device
+        j += 1
+    end
 
-    # laptop.check_battery_level
+    laptop.check_battery_level
 
     laptop.check_signal
     computer.boot
