@@ -25,6 +25,10 @@ SET first_name = "Ana", middle_name="Cui", last_name="Cajocson", age=25, locatio
 WHERE id = 1;
 
 
+/* Deleting last record */
+DELETE FROM students
+WHERE id = 6;
+
 
 
 
