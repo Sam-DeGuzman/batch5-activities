@@ -1,12 +1,7 @@
-/* Creating Table */
-
 CREATE TABLE students(
 	id INT, first_name VARCHAR(255),middle_name VARCHAR(255),last_name VARCHAR(255),age INT, location VARCHAR(255)
 );
 
-
-
-/* Inserting Data */
 
 INSERT INTO students(id, first_name, middle_name, last_name, age, location) 
 VALUES(1,"Juan","Blank","Cruz",18,"Manila"),
@@ -16,19 +11,21 @@ VALUES(1,"Juan","Blank","Cruz",18,"Manila"),
 (5,"Pau","Blank","Riosa",22,"Marikina"),
 (6,"Piolo","Blank","Pascual",25,"Manila");
 
-/* Updating first record */
-UPDATE students
-SET first_name = "Ana", middle_name="Cui", last_name="Cajocson", age=25, location="Bulacan"
-WHERE id = 1;
 
 
-/* Deleting last record */
-DELETE FROM students
-WHERE id = 6;
+--Display the count of all Students
+SELECT COUNT(id) NumOf_Students FROM students;
 
 
+--Display all Students with location is Manila
+SELECT * FROM students 
+WHERE location = 'Manila';
 
 
+--Display the average age of all students. 
+SELECT AVG(age) Average_Age FROM students;
 
 
-
+--Display all students by age descending. 
+SELECT * FROM students
+ORDER BY age DESC;
