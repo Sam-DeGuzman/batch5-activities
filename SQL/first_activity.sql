@@ -9,12 +9,12 @@ CREATE TABLE students(
 /* Inserting Data */
 
 INSERT INTO students(id, first_name, middle_name, last_name, age, location) 
-VALUES(1,"Juan","Blank","Cruz",18,"Manila"),
-(2,"John","Blank","Young",20,"Manila"),
-(3,"Victor","Blank","Rivera",21,"Manila"),
-(4,"Adrian","Blank","Co",19,"Laguna"),
-(5,"Pau","Blank","Riosa",22,"Marikina"),
-(6,"Piolo","Blank","Pascual",25,"Manila");
+VALUES(1,'Juan','Blank','Cruz',18,'Manila'),
+(2,'John','Blank','Young',20,'Manila'),
+(3,'Victor','Blank','Rivera',21,'Manila'),
+(4,'Adrian','Blank','Co',19,'Laguna'),
+(5,'Pau','Blank','Riosa',22,'Marikina'),
+(6,'Piolo','Blank','Pascual',25,'Manila');
 
 /* Updating first record */
 UPDATE students
