@@ -47,4 +47,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 1. [Activities](https://github.com/Sam-DeGuzman/batch5-activities/tree/main/RubyActivities)
 <!---```### Support or Contact```--->
 
+
+### Ruby on Rails
+1. [WriteUp - Journal App](https://writeup-journal.herokuapp.com/) - A Journal/Planner App developed Using Ruby on Rails, uses Devise for user authentication and Rsec for Tests. 
 <!---Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.--->
