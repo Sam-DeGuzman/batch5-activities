@@ -49,9 +49,9 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 
 ### Ruby on Rails
-1. [WriteUp - Journal App](https://writeup-journal.herokuapp.com/) - A Journal/Planner App Using Ruby on Rails with 'Devise'gem for user authentication. 
-2. [Peddler - Stock Trading App](https://peddler-stock.herokuapp.com/) - A Stock Trading App Using Ruby on Rails with 'Devise'gem for user authentication and IEX Finance API for stocks information. 
+1. [WriteUp - Journal App](https://writeup-journal.herokuapp.com/) - A Journal/Planner App Using Ruby on Rails with 'Devise'gem for account authentication and Bootstrap CSS. 
+2. [Peddler - Stock Trading App](https://peddler-stock.herokuapp.com/) - A Stock Trading App Using Ruby on Rails with 'Devise'gem for account authentication, IEX Finance API for stocks information and Tailwind CSS. 
 
 ### Back-End Final Project
-1. [ArtPark (On-going)](https://github.com/Sam-DeGuzman/ArtPark) 'Code URL' - Final Project for Back-end, an application for buying and selling of Artworks and commission contacts.
+1. [ArtPark (On-going)](https://github.com/Sam-DeGuzman/ArtPark) 'Code URL' - Final Project for Back-end, an application for buying and selling of Artworks and commission contacts using Ruby on Rails with 'Devise' gem for account authentication and Tailwind CSS.
 <!---Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.--->
